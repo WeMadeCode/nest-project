@@ -1,9 +1,11 @@
 import { Module } from '@nestjs/common';
 import { AppController } from './app.controller';
 import { AppService } from './app.service';
+import { BillModule } from '../bill/bill.module';
 
+// @Module()：模块装饰器
 @Module({
-  imports: [],
+  imports: [BillModule],
   controllers: [AppController],
   providers: [AppService],
 })
